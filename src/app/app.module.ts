@@ -34,10 +34,12 @@ import { InputComponent }       from './component/sharing-data/input/input.compo
 
 
   imports: [
+    
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule, ReactiveFormsModule,
     MaterialModule
+
   ],
     
   providers: [],

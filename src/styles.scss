@@ -5,8 +5,8 @@
 #myApp {
   background: #fff;
   border-radius: 8px;
-  margin:25px auto;
-  padding:25px;
+  margin:20px auto;
+  padding:10px;
   border:4px solid #ef9fc7;
 }
 
@@ -20,14 +20,10 @@
   color:steelblue;
 }
 
-.header-item {
-  
-}
 
 .logo{
   height:80px;
   transition: transform 0.2s ease-in-out;
-  margin-right:10px;
   &:hover{
     transform: translateY(-3px)
   }
@@ -48,7 +44,7 @@ body {
 
 .component {
   display: table;
-  width:90%;
+  width:95%;
   border-radius: 8px;
   border:1px solid blue;
   padding:5px;

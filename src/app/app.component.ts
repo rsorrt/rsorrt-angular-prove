@@ -1,6 +1,7 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import MyLogger  from "./commons/logger";
+import { MyConstants } from './constants/constants'
+
 
 @Component({
   selector: 'my-app',
@@ -9,8 +10,15 @@ import MyLogger  from "./commons/logger";
 })
 
 
-
 export class AppComponent implements OnInit {
+
+  baseUrlImg: string;
+
+  constructor () {
+
+    this.baseUrlImg = MyConstants.BASE_URL_IMG
+    
+  }
 
   ngOnInit(): void {
    
