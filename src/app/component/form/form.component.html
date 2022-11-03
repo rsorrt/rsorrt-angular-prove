@@ -1,0 +1,50 @@
+
+<div class="component">
+
+  <div class="ComponentTitle">Form Component</div>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearence="standard" class="section"> 
+        <mat-label for="firstname">firstname</mat-label>
+        <input matInput type="text" name="firstname" formControlName="firstname" placeholder="insert firstname">
+        <mat-icon matSuffix> sentiment_very_satisfied </mat-icon>  
+        <!--mat-hint>at least 3 character</mat-hint--> 
+    </mat-form-field>
+      
+    <div class="section">
+      <mat-label>Gender:</mat-label>
+      <mat-radio-group aria-label="Select an option" formControlName="gender">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+
+
+    <mat-form-field>
+      <input matInput
+        readonly
+        [matDatepicker]="picker"
+        placeholder="Date of birth"
+        formControlName="dateOfBirth"
+      />
+      <mat-hint>select your date of birth</mat-hint> 
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]='!myForm.valid'>Submit</button>
+
+  </form>
+
+
+  <mat-divider style="margin-top:30px;"></mat-divider>
+
+  <div *ngIf="isFormSubmitted">
+    FORM SUBMITTED
+  {{this.myForm.controls.gender.value}}
+  </div>
+
+
+</div><!--component-->
